@@ -1,4 +1,4 @@
-# zoom_clone
+# GroupMeet-Up
 
 A new Flutter project.
 
