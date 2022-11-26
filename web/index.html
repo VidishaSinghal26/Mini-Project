@@ -19,6 +19,7 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  <meta name="google-signin-client_id" content="758587576975-kjcic539i7hhikc5n9rph0qj5s15ofgf.apps.googleusercontent.com" >
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -40,7 +41,31 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBZtoXSZxlgLKjJHPLOyFOFLvfcL3nJFoE",
+      authDomain: "zoom-clone-a245d.firebaseapp.com",
+      projectId: "zoom-clone-a245d",
+      storageBucket: "zoom-clone-a245d.appspot.com",
+      messagingSenderId: "758587576975",
+      appId: "1:758587576975:web:0f6e5a2d63a13ce8a5d6fa",
+      measurementId: "G-198SVX5B9C"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
   <script>
+    
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
@@ -54,5 +79,6 @@
       });
     });
   </script>
+  <script src="https://meet.jit.si/external_api.js" type="application/javascript"></script>
 </body>
 </html>

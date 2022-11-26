@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zoom_clone">
+    package="com.example.zoom_clone"
+    xmlns:tools="http://schemas.android.com/tools">
    <application
-        android:label="zoom_clone"
+        tools:replace="android:label"
+        android:label="GroupMeet-Up"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
