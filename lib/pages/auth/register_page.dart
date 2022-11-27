@@ -40,7 +40,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         const Text(
                           "GroupMeet-Up",
                           style: TextStyle(
-                              fontSize: 40, fontWeight: FontWeight.bold),
+                              fontSize: 32, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 10),
                         const Text(

@@ -82,9 +82,9 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: false,
         elevation: 0,
-        title: Text(widget.groupName),
+        title: Text(widget.groupName, textAlign: TextAlign.left),
         backgroundColor: Theme.of(context).primaryColor,
         actions: [
             IconButton(
