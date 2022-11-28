@@ -37,6 +37,7 @@ dependencies:
   jitsi_meet: ^4.0.0
   flutter_launcher_icons: ^0.11.0
   shared_preferences: 
+  google_fonts: ^3.0.1
 
 
   # The following adds the Cupertino Icons font to your application.

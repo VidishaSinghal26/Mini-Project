@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'dart:math';
+import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:jitsi_meet/jitsi_meet.dart';
+import 'package:zoom_clone/pages/notes_page.dart';
 import '../../pages/group_info.dart';
 import '../../service/database_service.dart';
 import '../../widgets/message_tile.dart';
@@ -152,9 +154,22 @@ class _ChatPageState extends State<ChatPage> {
       ),
       body: Stack(
         children: <Widget>[
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/chatback.jpg"),
+                fit: BoxFit.cover
+                )
+            ),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX:2 ,sigmaY: 2),
+              child: new Container(decoration : new BoxDecoration(color: Colors.white.withOpacity(0.0))),
+            ),
+          ),
           // chat messages here
           chatMessages(),
           Container(
+            
             alignment: Alignment.bottomCenter,
             width: MediaQuery.of(context).size.width,
             child: Container(
@@ -177,6 +192,25 @@ class _ChatPageState extends State<ChatPage> {
                 ),
                 GestureDetector(
                   onTap: () {
+                    nextScreen(context,NotesPage());
+                  },
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: const Center(
+                        child: Icon(
+                      Icons.note_add,
+                      color: Colors.white,
+                    )),
+                  ),
+                ),
+                SizedBox(width: 8,),
+                GestureDetector(
+                  onTap: () {
                     sendMessage();
                   },
                   child: Container(
@@ -192,7 +226,8 @@ class _ChatPageState extends State<ChatPage> {
                       color: Colors.white,
                     )),
                   ),
-                )
+                ),
+                
               ]),
             ),
           )
